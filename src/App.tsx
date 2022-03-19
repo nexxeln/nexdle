@@ -73,6 +73,7 @@ const App = () => {
           className="absolute left-0 right-0 w-3/4 p-6 mx-auto text-center bg-white border border-gray-500 rounded top-1/4"
         >
           Game Over!
+          <WordRow letters={state.answer} />
           <button
             className="block p-2 mx-auto mt-4 bg-green-500 border border-green-500 rounded shadow-md"
             onClick={() => {
