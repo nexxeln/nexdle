@@ -1,4 +1,4 @@
-import { useStorage } from "../storage";
+import { useStore } from "../storage";
 import { computeGuess, LetterState, LETTER_LENGTH } from "../word-utils";
 
 interface WordRowProps {
@@ -6,7 +6,7 @@ interface WordRowProps {
 }
 
 const WordRow = ({ letters: lettersProp = "" }: WordRowProps) => {
-  const answer = useStorage((state) => state.answer);
+  const answer = useStore((state) => state.answer);
   const lettersRemaining = LETTER_LENGTH - lettersProp.length;
   const letters = lettersProp
     .split("")
@@ -37,11 +37,11 @@ const CharacterBox = ({ value, state }: CharacterBoxProps) => {
   const stateStyles = state == null ? "" : characterStateStyles[state];
 
   return (
-    <div
+    <span
       className={`inline-block p-4 text-2xl font-bold text-center uppercase border-2 border-gray-500 ${stateStyles}`}
     >
       {value}
-    </div>
+    </span>
   );
 };
 

@@ -1,12 +1,12 @@
 import { useState } from "react";
 import WordRow from "./components/WordRow";
-import { useStorage } from "./storage";
+import { useStore } from "./storage";
 import { LETTER_LENGTH } from "./word-utils";
 
 const GUESS_LENGTH = 6;
 
 const App = () => {
-  const state = useStorage();
+  const state = useStore();
   const [guess, setGuess] = useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
