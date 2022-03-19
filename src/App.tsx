@@ -4,10 +4,11 @@ import { useStore, GUESS_LENGTH } from "./storage";
 import { useEffect, useState } from "react";
 import { usePrevious } from "./hooks/usePrevious";
 import { isValidWord, LETTER_LENGTH } from "./word-utils";
+import Keyboard from "./components/Keyboard";
 
 const App = () => {
   const state = useStore();
-  const [guess, setGuess] = useGuess();
+  const [guess, setGuess, addGuessLetter] = useGuess();
   const addGuess = useStore((s) => s.addGuess);
   const previousGuess = usePrevious(guess);
   const [showInvalidGuess, setInvalidGuess] = useState(false);
@@ -53,6 +54,12 @@ const App = () => {
       <header className="pb-2 my-2 border-b border-gray-500">
         <h1 className="text-4xl text-center">wordle</h1>
       </header>
+
+      <Keyboard
+        onClick={(letter) => {
+          addGuessLetter(letter);
+        }}
+      />
 
       <main className="grid grid-rows-6 gap-4">
         {rows.map(({ guess, result }, index) => (
