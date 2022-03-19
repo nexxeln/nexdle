@@ -4,7 +4,8 @@ export const getRandomWord = () => {
   const randomIndex = Math.floor(Math.random() * wordBank.length);
   return wordBank[randomIndex];
 };
-const word = getRandomWord();
+
+export const LETTER_LENGTH = 5;
 
 export enum LetterState {
   Miss,
@@ -12,12 +13,7 @@ export enum LetterState {
   Match
 }
 
-console.log(word);
-
-export const computeGuess = (
-  guess: string,
-  answer: string = word
-): LetterState[] => {
+export const computeGuess = (guess: string, answer: string): LetterState[] => {
   const result: LetterState[] = [];
 
   if (guess.length !== answer.length) {
