@@ -70,3 +70,7 @@ export const computeGuess = (guess: string, answer: string): LetterState[] => {
 
   return result;
 };
+
+export const isValidWord = (guess: string): boolean => {
+  return wordBank.includes(guess);
+};

@@ -1,5 +1,10 @@
 import { describe, expect, test } from "vitest";
-import { computeGuess, getRandomWord, LetterState } from "./word-utils";
+import {
+  computeGuess,
+  getRandomWord,
+  LetterState,
+  isValidWord
+} from "./word-utils";
 
 describe("getRandomWord", () => {
   test("random word", () => {
@@ -71,5 +76,15 @@ describe("computeGuess", () => {
 
   test("returns empty array when given incomplete word", () => {
     expect(computeGuess("g", "grass")).toEqual([]);
+  });
+});
+
+describe("isValidWord", () => {
+  test("works with a valid word in the word bank", () => {
+    expect(isValidWord("grass")).toBe(true);
+  });
+
+  test("works with an invalid word in the word bank", () => {
+    expect(isValidWord("hduoh")).toBe(false);
   });
 });

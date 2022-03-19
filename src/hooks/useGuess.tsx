@@ -4,10 +4,8 @@ import { useStore } from "../storage";
 import { LETTER_LENGTH } from "../word-utils";
 
 export function useGuess() {
-  const addGuess = useStore((s) => s.addGuess);
   const guessState = useState("");
   const [guess, setGuess] = guessState;
-  const previousGuess = usePrevious(guess);
 
   const handleKeyDown = (e: KeyboardEvent) => {
     setGuess((currentGuess) => {
@@ -41,10 +39,5 @@ export function useGuess() {
       document.removeEventListener("keydown", handleKeyDown);
     };
   }, []);
-  useEffect(() => {
-    if (guess.length === 0 && previousGuess?.length === LETTER_LENGTH) {
-      addGuess(previousGuess);
-    }
-  }, [guess]);
   return guessState;
 }
