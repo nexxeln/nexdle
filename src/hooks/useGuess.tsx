@@ -1,33 +1,34 @@
-import { useEffect, useState, useRef } from "react";
+import { usePrevious } from "./usePrevious";
+import { useState, useEffect, useRef } from "react";
 import { useStore } from "../storage";
 import { LETTER_LENGTH } from "../word-utils";
-import usePrevious from "./usePrevious";
 
-const useGuess = (): [string, React.Dispatch<React.SetStateAction<string>>] => {
+export function useGuess() {
   const addGuess = useStore((s) => s.addGuess);
-  const [guess, setGuess] = useState("");
+  const guessState = useState("");
+  const [guess, setGuess] = guessState;
   const previousGuess = usePrevious(guess);
 
-  const handleKeyDown = (e: KeyboardEvent) => {
-    let letter = e.key;
-
-    setGuess((currentGuess) => {
+  const onKeyDown = (e: KeyboardEvent) => {
+    setGuess((curGuess) => {
+      let letter = e.key;
       const newGuess =
-        letter.length === 1 ? currentGuess + letter : currentGuess;
+        letter.length === 1 && curGuess.length !== LETTER_LENGTH
+          ? curGuess + letter
+          : curGuess;
 
-      switch (letter) {
+      switch (e.key) {
         case "Backspace":
           return newGuess.slice(0, -1);
 
         case "Enter":
           if (newGuess.length === LETTER_LENGTH) {
-            addGuess(newGuess);
             return "";
           }
       }
 
-      if (currentGuess.length === LETTER_LENGTH) {
-        return currentGuess;
+      if (newGuess.length === LETTER_LENGTH) {
+        return newGuess;
       }
 
       return newGuess;
@@ -35,19 +36,15 @@ const useGuess = (): [string, React.Dispatch<React.SetStateAction<string>>] => {
   };
 
   useEffect(() => {
-    document.addEventListener("keydown", handleKeyDown);
+    document.addEventListener("keydown", onKeyDown);
     return () => {
-      document.removeEventListener("keydown", handleKeyDown);
+      document.removeEventListener("keydown", onKeyDown);
     };
   }, []);
-
   useEffect(() => {
     if (guess.length === 0 && previousGuess?.length === LETTER_LENGTH) {
       addGuess(previousGuess);
     }
   }, [guess]);
-
-  return [guess, setGuess];
-};
-
-export default useGuess;
+  return guessState;
+} // source https://usehooks.com/usePrevious/

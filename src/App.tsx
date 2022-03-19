@@ -1,7 +1,6 @@
+import { useGuess } from "./hooks/useGuess";
 import WordRow from "./components/WordRow";
-import useGuess from "./hooks/useGuess";
 import { useStore, GUESS_LENGTH } from "./storage";
-import { LETTER_LENGTH } from "./word-utils";
 
 const App = () => {
   const state = useStore();
