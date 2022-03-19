@@ -9,13 +9,13 @@ export function useGuess() {
   const [guess, setGuess] = guessState;
   const previousGuess = usePrevious(guess);
 
-  const onKeyDown = (e: KeyboardEvent) => {
-    setGuess((curGuess) => {
+  const handleKeyDown = (e: KeyboardEvent) => {
+    setGuess((currentGuess) => {
       let letter = e.key;
       const newGuess =
-        letter.length === 1 && curGuess.length !== LETTER_LENGTH
-          ? curGuess + letter
-          : curGuess;
+        letter.length === 1 && currentGuess.length !== LETTER_LENGTH
+          ? currentGuess + letter
+          : currentGuess;
 
       switch (e.key) {
         case "Backspace":
@@ -36,9 +36,9 @@ export function useGuess() {
   };
 
   useEffect(() => {
-    document.addEventListener("keydown", onKeyDown);
+    document.addEventListener("keydown", handleKeyDown);
     return () => {
-      document.removeEventListener("keydown", onKeyDown);
+      document.removeEventListener("keydown", handleKeyDown);
     };
   }, []);
   useEffect(() => {
@@ -47,4 +47,4 @@ export function useGuess() {
     }
   }, [guess]);
   return guessState;
-} // source https://usehooks.com/usePrevious/
+}
