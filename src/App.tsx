@@ -1,6 +1,6 @@
 import { useGuess } from "./hooks/useGuess";
 import WordRow from "./components/WordRow";
-import { useStore, GUESS_LENGTH } from "./storage";
+import { useStore, GUESS_LENGTH } from "./store";
 import { useEffect, useState } from "react";
 import { usePrevious } from "./hooks/usePrevious";
 import { isValidWord, LETTER_LENGTH } from "./word-utils";

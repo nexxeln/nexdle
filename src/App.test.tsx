@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import App from "./App";
-import { useStore } from "./storage";
+import { useStore } from "./store";
 import { render, screen, userEvent } from "./test/test-utils";
 
 describe("Simple working test", () => {

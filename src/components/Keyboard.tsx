@@ -1,4 +1,4 @@
-import { useStore } from "../storage";
+import { useStore } from "../store";
 import { LetterState } from "../word-utils";
 
 interface KeyboardProps {
