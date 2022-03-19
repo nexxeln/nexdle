@@ -1,4 +1,3 @@
-import { useState } from "react";
 import WordRow from "./components/WordRow";
 
 const App = () => {
@@ -8,10 +7,13 @@ const App = () => {
         <h1 className="text-4xl text-center">wordle</h1>
       </header>
 
-      <main>
-        <WordRow letters="hel" />
-        <WordRow letters="hell" />
+      <main className="grid grid-rows-6 gap-4">
         <WordRow letters="hello" />
+        <WordRow letters="sugar" />
+        <WordRow letters="today" />
+        <WordRow letters="colon" />
+        <WordRow letters="grass" />
+        <WordRow letters="fr" />
       </main>
     </div>
   );
