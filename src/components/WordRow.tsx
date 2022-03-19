@@ -1,4 +1,4 @@
-import { useStore } from "../store";
+import { useStorage } from "../storage";
 import { computeGuess, LetterState, LETTER_LENGTH } from "../word-utils";
 
 interface WordRowProps {
@@ -6,7 +6,7 @@ interface WordRowProps {
 }
 
 const WordRow = ({ letters: lettersProp = "" }: WordRowProps) => {
-  const answer = useStore((state) => state.answer);
+  const answer = useStorage((state) => state.answer);
   const lettersRemaining = LETTER_LENGTH - lettersProp.length;
   const letters = lettersProp
     .split("")

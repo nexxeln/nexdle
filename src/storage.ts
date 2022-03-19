@@ -6,9 +6,10 @@ interface StoreState {
   answer: string;
   guesses: string[];
   addGuess: (guess: string) => void;
+  newGame: () => void;
 }
 
-export const useStore = create<StoreState>(
+export const useStorage = create<StoreState>(
   persist(
     (set) => ({
       answer: getRandomWord(),
@@ -17,6 +18,12 @@ export const useStore = create<StoreState>(
         set((state) => ({
           guesses: [...state.guesses, guess]
         }));
+      },
+      newGame: () => {
+        set({
+          answer: getRandomWord(),
+          guesses: []
+        });
       }
     }),
     {
