@@ -2,7 +2,7 @@
 
 ![screenshot](https://github.com/nexxeln/nexdle/blob/main/images/screenshot.png?raw=true)
 
-<p>I'm having issues with deployment, if someone can help I'd appreciate it.</p>
+<h3 align="center">Play <a href="https://nexxeln.github.io/nexdle/">here</a>!</h3>
 
 ## Overview
 
