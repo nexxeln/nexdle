@@ -41,7 +41,7 @@ describe("Simple working test", () => {
     useStore.getState().newGame(Array(6).fill("grass"));
     render(<App />);
     expect(screen.getByText("Game Over!")).toBeInTheDocument();
-    userEvent.click(screen.getByText("New Game"));
+    userEvent.click(screen.getByText("NEW GAME"));
     expect(document.querySelector("main")?.textContent).toEqual("");
   });
 });

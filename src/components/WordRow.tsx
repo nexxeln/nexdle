@@ -26,7 +26,7 @@ const WordRow = ({
 };
 
 const characterStateStyles = {
-  [LetterState.Miss]: "bg-gray-500 border-gray-500",
+  [LetterState.Miss]: "bg-gray-800 border-gray-800",
   [LetterState.Present]: "bg-yellow-500 border-yellow-500",
   [LetterState.Match]: "bg-green-500 border-green-500"
 };
@@ -41,7 +41,7 @@ const CharacterBox = ({ value, state }: CharacterBoxProps) => {
 
   return (
     <span
-      className={`inline-block p-4 text-2xl font-bold text-center before:inline-block before:content-['_'] uppercase border-2 border-gray-500 ${stateStyles}`}
+      className={`inline-block p-4 text-2xl font-bold text-gray-50 text-center before:inline-block before:content-['_'] uppercase border border-gray-500 ${stateStyles}`}
     >
       {value}
     </span>

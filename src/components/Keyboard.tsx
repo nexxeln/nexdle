@@ -20,7 +20,10 @@ export default function Keyboard({ onClick: onClickProps }: KeyboardProps) {
   return (
     <div className={`flex flex-col`}>
       {keyboardKeys.map((keyboardRow, rowIndex) => (
-        <div key={rowIndex} className="flex justify-center my-2 mb-2 space-x-1">
+        <div
+          key={rowIndex}
+          className="flex justify-center my-2 mb-2 space-x-1 text-white"
+        >
           {keyboardRow.map((key, index) => {
             let styles = "rounded font-bold uppercase flex-1 py-2";
 
@@ -29,7 +32,7 @@ export default function Keyboard({ onClick: onClickProps }: KeyboardProps) {
             if (letterState) {
               styles += " text-white px-1 " + letterState;
             } else if (key !== "") {
-              styles += " bg-gray-400";
+              styles += " bg-gray-600";
             }
 
             if (key === "") {
@@ -51,7 +54,7 @@ export default function Keyboard({ onClick: onClickProps }: KeyboardProps) {
 }
 
 const keyStateStyles = {
-  [LetterState.Miss]: "bg-gray-600",
+  [LetterState.Miss]: "bg-gray-800",
   [LetterState.Present]: "bg-yellow-500",
   [LetterState.Match]: "bg-green-500"
 };
