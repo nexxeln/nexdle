@@ -20,7 +20,7 @@ export default function Keyboard({ onClick: onClickProps }: KeyboardProps) {
   return (
     <div className={`flex flex-col`}>
       {keyboardKeys.map((keyboardRow, rowIndex) => (
-        <div key={rowIndex} className="flex justify-center my-2 space-x-1">
+        <div key={rowIndex} className="flex justify-center my-2 mb-2 space-x-1">
           {keyboardRow.map((key, index) => {
             let styles = "rounded font-bold uppercase flex-1 py-2";
 
