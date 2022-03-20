@@ -1,8 +1,8 @@
 import wordBank from "./word-bank.json";
 
 export const getRandomWord = () => {
-  const randomIndex = Math.floor(Math.random() * wordBank.length);
-  return wordBank[randomIndex];
+  const randomIndex = Math.floor(Math.random() * wordBank.valid.length);
+  return wordBank.valid[randomIndex];
 };
 
 export const LETTER_LENGTH = 5;
@@ -72,5 +72,5 @@ export const computeGuess = (guess: string, answer: string): LetterState[] => {
 };
 
 export const isValidWord = (guess: string): boolean => {
-  return wordBank.includes(guess);
+  return wordBank.valid.concat(wordBank.invalid).includes(guess);
 };
