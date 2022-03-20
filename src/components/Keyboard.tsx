@@ -1,5 +1,6 @@
 import { useStore } from "../store";
 import { LetterState } from "../word-utils";
+import { BsFillBackspaceFill } from "react-icons/bs";
 
 interface KeyboardProps {
   onClick: (key: string) => void;
