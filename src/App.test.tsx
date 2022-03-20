@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, test } from "vitest";
 import App from "./App";
 import { useStore } from "./store";
 import { render, screen, userEvent } from "./test/test-utils";
