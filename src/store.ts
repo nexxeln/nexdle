@@ -77,7 +77,7 @@ export const useStore = create<StoreState>(
       };
     },
     {
-      name: "wordle" // unique name
+      name: "nexdle" // unique name
     }
   )
 );
