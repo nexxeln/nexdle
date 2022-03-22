@@ -54,6 +54,16 @@ describe("computeGuess", () => {
     ]);
   });
 
+  test("if a letter is guessed multiple times and is in the answer multiple times", () => {
+    expect(computeGuess("reeds", "fever")).toEqual([
+      LetterState.Present,
+      LetterState.Match,
+      LetterState.Present,
+      LetterState.Miss,
+      LetterState.Miss
+    ]);
+  });
+
   test("when two letters are present but the answer has only one of those letters", () => {
     expect(computeGuess("berry", "grass")).toEqual([
       LetterState.Miss,
