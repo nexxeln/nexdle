@@ -15,7 +15,7 @@ const App = () => {
   const [showInvalidGuess, setInvalidGuess] = useState(false);
 
   useEffect(() => {
-    let id: any;
+    let id: NodeJS.Timeout;
     if (showInvalidGuess) {
       id = setTimeout(() => setInvalidGuess(false), 2000);
     }
@@ -112,5 +112,3 @@ const App = () => {
 };
 
 export default App;
-
-// useStore.persist.clearStorage();
