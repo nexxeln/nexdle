@@ -49,7 +49,7 @@ const Instructions = ({ isOpen, onClose }: InstructionsProps) => {
             </p>
           </div>
 
-          <div className="flex items-center py-3 space-x-5">
+          <div className="flex items-center pb-3 space-x-5">
             <span className="inline-block p-4 text-2xl font-bold text-center bg-gray-800 border border-gray-800 text-gray-50">
               W
             </span>
