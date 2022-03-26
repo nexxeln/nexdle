@@ -9,13 +9,14 @@ const Instructions = ({ isOpen, onClose }: InstructionsProps) => {
   return isOpen ? (
     <div
       role="modal"
-      className="absolute left-0 right-0 w-full h-auto bg-black border border-gray-500 rounded-lg my-28 instructions"
+      className="absolute left-0 right-0 w-full h-auto bg-black border border-gray-500 rounded-lg my-28"
     >
       <div className="py-4 text-white">
         <h1 className="text-3xl font-bold text-center ">HOW TO PLAY</h1>
         <AiOutlineCloseCircle
           className="absolute top-0 right-0 text-3xl text-gray-400 transition-opacity duration-300 cursor-pointer hover:opacity-80"
           onClick={onClose}
+          data-testid="close-instructions"
         />
 
         <p className="px-4 text-xl text-left">

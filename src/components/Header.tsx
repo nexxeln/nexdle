@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <header className="relative flex justify-center pb-2 my-2 border-b border-gray-500">
-      <button onClick={toggleInstructions}>
+      <button onClick={toggleInstructions} data-testid="instructions">
         <BsPatchQuestion className="absolute text-3xl text-white transition-opacity duration-300 left-3 top-2 hover:opacity-80" />
       </button>
 

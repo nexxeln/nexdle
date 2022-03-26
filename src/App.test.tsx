@@ -44,4 +44,17 @@ describe("Simple working test", () => {
     userEvent.click(screen.getByText("NEW GAME"));
     expect(document.querySelector("main")?.textContent).toEqual("");
   });
+
+  test("able to see instructions modal", () => {
+    render(<App />);
+    userEvent.click(screen.getByTestId("instructions"));
+    expect(screen.getByText("HOW TO PLAY")).toBeInTheDocument();
+  });
+
+  test("able to close instructions modal", () => {
+    render(<App />);
+    userEvent.click(screen.getByTestId("instructions"));
+    userEvent.click(screen.getByTestId("close-instructions"));
+    expect(screen.queryByText("HOW TO PLAY")).toBeNull();
+  });
 });
