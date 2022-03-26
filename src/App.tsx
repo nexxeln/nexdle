@@ -96,7 +96,7 @@ const App = () => {
             )}
 
             <button
-              className="absolute left-0 right-0 block p-2 mx-auto mt-4 font-bold text-white bg-green-500 border border-green-500 rounded top-56 hover:opacity-90"
+              className="absolute left-0 right-0 block p-2 mx-auto mt-4 font-bold text-white bg-green-500 border border-green-500 rounded top-56 hover:opacity-90 w-28"
               onClick={() => {
                 state.newGame();
                 setGuess("");
