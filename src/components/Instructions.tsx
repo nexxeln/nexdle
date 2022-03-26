@@ -33,9 +33,10 @@ const Instructions = ({ isOpen, onClose }: InstructionsProps) => {
             <span className="inline-block p-4 text-2xl font-bold text-center bg-green-500 border border-green-500 text-gray-50">
               W
             </span>
+            <span className="text-xl">={">"}</span>
             <p className="text-xl">
-              ={">"} The letter <strong>W</strong> is in the word and in the
-              correct spot.
+              The letter <strong>W</strong> is in the word and in the correct
+              spot.
             </p>
           </div>
 
@@ -43,9 +44,10 @@ const Instructions = ({ isOpen, onClose }: InstructionsProps) => {
             <span className="inline-block p-4 text-2xl font-bold text-center bg-yellow-500 border border-yellow-500 text-gray-50">
               W
             </span>
+            <span className="text-xl">={">"}</span>
             <p className="text-xl">
-              ={">"} The letter <strong>W</strong> is in the word but in the
-              wrong spot.
+              The letter <strong>W</strong> is in the word but in the wrong
+              spot.
             </p>
           </div>
 
@@ -53,9 +55,9 @@ const Instructions = ({ isOpen, onClose }: InstructionsProps) => {
             <span className="inline-block p-4 text-2xl font-bold text-center bg-gray-800 border border-gray-800 text-gray-50">
               W
             </span>
+            <span className="text-xl">={">"}</span>
             <p className="text-xl">
-              ={">"} The letter <strong>W</strong> is not in the word in any
-              spot.
+              The letter <strong>W</strong> is not in the word in any spot.
             </p>
           </div>
         </div>
