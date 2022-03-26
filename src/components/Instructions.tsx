@@ -19,7 +19,7 @@ const Instructions = ({ isOpen, onClose }: InstructionsProps) => {
           data-testid="close-instructions"
         />
 
-        <p className="px-4 text-xl text-left">
+        <p className="px-4 pt-2 text-xl text-left text-gray-200">
           The goal of the game is to guess the word within <strong>six</strong>{" "}
           tries. Each guess should be a <strong>valid five-letter</strong> word.
           Hit the enter button to submit your guess. After each guess the color
@@ -28,7 +28,7 @@ const Instructions = ({ isOpen, onClose }: InstructionsProps) => {
           <br />
           <br />
         </p>
-        <div className="px-4">
+        <div className="px-4 text-gray-200">
           <div className="flex items-center space-x-5">
             <span className="inline-block p-4 text-2xl font-bold text-center bg-green-500 border border-green-500 text-gray-50">
               W
