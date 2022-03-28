@@ -37,6 +37,14 @@ yarn dev
 yarn test
 ```
 
+- To run tests using the insane vitest ui feature
+
+```bash
+yarn test:ui
+```
+![vitest-ui](https://github.com/nexxeln/nexdle/blob/main/images/Code_Vyzc5YbawL.gif?raw=true)
+
+
 ## Contributing
 
 Contributions are welcome!
