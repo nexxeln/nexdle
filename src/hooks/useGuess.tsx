@@ -45,5 +45,6 @@ export function useGuess(): [
       document.removeEventListener("keydown", handleKeyDown);
     };
   }, []);
+
   return [guess, setGuess, addGuessLetter];
 }

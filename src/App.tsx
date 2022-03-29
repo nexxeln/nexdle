@@ -54,6 +54,7 @@ const App = () => {
     <div className="app">
       <div className="relative mx-auto app w-96">
         <Header />
+
         <main className="grid grid-rows-6 gap-4 mb-4">
           {rows.map(({ guess, result }, index) => (
             <WordRow

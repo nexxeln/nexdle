@@ -12,12 +12,14 @@ export default function Keyboard({ onClick: onClickProps }: KeyboardProps) {
     const { textContent, innerHTML } = e.currentTarget;
 
     let returnProps = textContent!;
+
     if (textContent !== innerHTML) {
       returnProps = "Backspace";
     }
 
     onClickProps(returnProps);
   };
+
   return (
     <div className={`flex flex-col`}>
       {keyboardKeys.map((keyboardRow, rowIndex) => (

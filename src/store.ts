@@ -29,6 +29,7 @@ export const useStore = create<StoreState>(
         const rows = [...get().rows, { guess, result }];
 
         const keyboardLetterState = get().keyboardLetterState;
+
         result.forEach((r, index) => {
           const resultGuessLetter = guess[index];
 
@@ -37,10 +38,12 @@ export const useStore = create<StoreState>(
           switch (currentLetterState) {
             case LetterState.Match:
               break;
+
             case LetterState.Present:
               if (r === LetterState.Miss) {
                 break;
               }
+
             default:
               keyboardLetterState[resultGuessLetter] = r;
               break;

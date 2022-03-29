@@ -28,6 +28,7 @@ const Instructions = ({ isOpen, onClose }: InstructionsProps) => {
           <br />
           <br />
         </p>
+
         <div className="px-4 text-gray-200">
           <div className="flex items-center space-x-5">
             <span className="inline-block p-4 text-2xl font-bold text-center bg-green-500 border border-green-500 text-gray-50">
