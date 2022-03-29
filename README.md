@@ -4,7 +4,7 @@
 
 <p align="center">
   <img src="https://www.codefactor.io/repository/github/nexxeln/nexdle/badge" alt="CodeFactor" />
-  <img src="https://img.shields.io/github/license/nexxeln/nexdle?color=%23b7410e" alt="license" />
+  <img src="https://img.shields.io/github/license/nexxeln/nexdle?color=%23DC2626" alt="license" />
 </p>
 <h3 align="center">Play <a href="https://nexxeln.github.io/nexdle/">here</a>!</h3>
 <p align="center">If you're finding the game difficult you can always use the <a href="https://github.com/nexxeln/wordle-solver">wordle solver</a> I made :)</p>
