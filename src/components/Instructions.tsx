@@ -35,8 +35,8 @@ const Instructions = ({ isOpen, onClose }: InstructionsProps) => {
             </span>
             <span className="text-xl">={">"}</span>
             <p className="text-xl">
-              The letter <strong>W</strong> is in the word and in the correct
-              spot.
+              The letter <strong>W</strong> is <strong>in</strong> the word and
+              in the <strong>correct spot</strong>.
             </p>
           </div>
 
@@ -46,8 +46,8 @@ const Instructions = ({ isOpen, onClose }: InstructionsProps) => {
             </span>
             <span className="text-xl">={">"}</span>
             <p className="text-xl">
-              The letter <strong>W</strong> is in the word but in the wrong
-              spot.
+              The letter <strong>W</strong> is <strong>in</strong> the word but
+              in the <strong>wrong spot</strong>.
             </p>
           </div>
 
@@ -57,7 +57,8 @@ const Instructions = ({ isOpen, onClose }: InstructionsProps) => {
             </span>
             <span className="text-xl">={">"}</span>
             <p className="text-xl">
-              The letter <strong>W</strong> is not in the word in any spot.
+              The letter <strong>W</strong> is <strong>not</strong> in the word
+              in any spot.
             </p>
           </div>
         </div>
