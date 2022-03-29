@@ -1,6 +1,6 @@
 <h1 align="center">nexdle</h1>
 
-![screenshot](https://github.com/nexxeln/nexdle/blob/main/images/screenshot.png?raw=true)
+![screenshot](https://github.com/nexxeln/nexdle/blob/main/images/new-screenshot.png?raw=true)
 
 <p align="center"><a href="https://www.codefactor.io/repository/github/nexxeln/nexdle"><img src="https://www.codefactor.io/repository/github/nexxeln/nexdle/badge" alt="CodeFactor" /></a></p>
 <h3 align="center">Play <a href="https://nexxeln.github.io/nexdle/">here</a>!</h3>
@@ -36,6 +36,14 @@ yarn dev
 ```bash
 yarn test
 ```
+
+- To run tests using the insane vitest ui feature
+
+```bash
+yarn test:ui
+```
+![vitest-ui](https://github.com/nexxeln/nexdle/blob/main/images/Code_Vyzc5YbawL.gif?raw=true)
+
 
 ## Contributing
 
