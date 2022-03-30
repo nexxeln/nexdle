@@ -11,8 +11,8 @@
     "test:ui": "vitest --ui"
   },
   "dependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "18",
+    "react-dom": "18",
     "react-icons": "^4.3.1",
     "zustand": "^3.7.1"
   },
