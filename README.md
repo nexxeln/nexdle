@@ -25,7 +25,7 @@ git clone https://github.com/nexxeln/nexdle.git
 
 ```bash
 cd nexdle
-yarn install
+yarn
 ```
 
 - Run the app
